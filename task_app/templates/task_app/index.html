@@ -5,9 +5,37 @@
 {% if object_list %}
 <h3>All Tasks</h3>
 {% endif %}
+<p>
+            <input
+                value="Add a new task"
+                type="button"
+                onclick="location.href='{% url "task-add" %}'"/>
+</p>
+
+<ul>
+   {% for task in page_obj %}
+
+    <li >
+       <div>
+            <div
+                    role="button"
+                    onclick="location.href=
+                        '{% url "item-update" task.id %}'">
+                    {{ task.title }} -
+                    (Due {{ task.due_date | date:"l, F j" }})
+            </div>
+        </div>
+    </li>
+
+    {% empty %}
+
+    {% endfor %}
+</ul>
+
+
 <ul>
     {% for task in object_list %}
-    <li>
+    <li >
         <div>
             <div
                     role="button"
@@ -18,15 +46,48 @@
             </div>
         </div>
     </li>
-    {% empty %}
-    <h4>You have no tasks!</h4>
+
     {% endfor %}
 </ul>
 
-<p>
-            <input
-                value="Add a new task"
-                type="button"
-                onclick="location.href='{% url "task-add" %}'"/>
-</p>
+
+
+
+
+<hr>
+
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+     {% if page_obj.has_previous %}
+
+          <a class="pagination-previous" href="{% url 'task-by-page' 1 %}" >
+              Previous
+          </a>
+    {% endif%}
+
+    {% if page_obj.has_next %}
+          <a class="pagination-next" href="{% url 'task-by-page' page_obj.next_page_number %}">
+              Next page
+          </a>
+    {% endif%}
+
+
+  <ul class="pagination-list">
+      {% for page_number in page_obj.paginator.page_range %}
+        <li>
+            <a
+            href="{% url 'task-by-page' page_number %}"
+            class="{% if page_number == page_obj.number %}pagination-link is-current{% endif %}"
+
+            >
+                {{page_number}}
+            </a>
+            <li><span class="pagination-ellipsis">  </span></li>
+        </li>
+    {% endfor %}
+
+
+  </ul>
+</nav>
+
 {% endblock %}

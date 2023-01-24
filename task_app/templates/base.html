@@ -7,22 +7,41 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Simple.css-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
         <title>Employee Task Lists</title>
     </head>
 
     <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" >
+      <div class="navbar-brand" >
+
+          <h1 class="title">TASK MANAGER</h1>
+
+
+      </div>
+    </nav>
+
+
+    <section>
+
         <div>
-            <h1 onclick="location.href='{% url "index" %}'">
+            <h1  class="title" onclick="location.href='{% url "index" %}'">
             Employee Task Lists
             </h1>
         </div>
-
-        <div>
-            {% block content %}
+    </section>
 
 
-            {% endblock %}
+        <div class="container">
+
+            <div >
+                {% block content %}
+                {% endblock content %}
+            </div>
         </div>
 
     </body>
