@@ -16,7 +16,7 @@ class TaskItem(models.Model):
 
     def get_absolute_url(self):
         return reverse(
-            "index", args=[ ]
+            "index", args=[]
         )
 
     def __str__(self):
