@@ -1,0 +1,31 @@
+<!-- TaskManagement/task_app/templates/task_app/index.html -->
+{% extends "base.html" %}
+{% block content %}
+<!--index.html-->
+{% if object_list %}
+<h3>All my Tasks</h3>
+{% endif %}
+<ul>
+    {% for task in object_list %}
+    <li>
+        <div>
+            <div
+                    role="button"
+                    onclick="location.href=
+                        '{% url "item-update" task.id %}'">
+                    {{ task.title }} -
+                    (Due {{ task.due_date | date:"l, F j" }})
+            </div>
+        </div>
+    </li>
+    {% empty %}
+    <h4>You have no tasks!</h4>
+    {% endfor %}
+</ul>
+<p>
+            <input
+                value="Add a new task"
+                type="button"
+                onclick="location.href='{% url "task-add" %}'"/>
+</p>
+{% endblock %}

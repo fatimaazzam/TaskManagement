@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Delete Task</h3>
+
+<p>Are you sure you want to delete the task: <b>{{ object.title }}</b>?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <input
+        value="Confirm"
+        type="submit">
+    <input
+        value="Cancel"
+        type="button"
+        onclick="location.href='{% url "index" %}';">
+</form>
+
+{% endblock %}
