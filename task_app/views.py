@@ -2,6 +2,10 @@ from django.shortcuts import render
 
 # TaskManagement/task_app/views.py
 from django.urls import reverse
+from csv import DictReader
+from io import TextIOWrapper
+from django.views.generic.base import View
+from .forms import UploadForm, TaskForm
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -54,6 +58,33 @@ class ItemDelete(DeleteView):
     model = TaskItem
 
     success_url = reverse_lazy("index")
+
+
+class UploadView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, "upload.html", {"form": UploadForm()})
+
+    def post(self, request, *args, **kwargs):
+        tasks_file = request.FILES["tasks_file"]
+        rows = TextIOWrapper(tasks_file, encoding="utf-8", newline="")
+        row_count = 0
+        form_errors = []
+        for row in DictReader(rows):
+            row_count += 1
+            form = TaskForm(row)
+            if not form.is_valid():
+                form_errors = form.errors
+                break
+
+            form.save()
+        return render(request, "upload.html",
+            {
+                "form": UploadForm(),
+                "form_errors": form_errors,
+                "row_count": row_count,
+            }
+        )
 
 
 def listing(request, page):

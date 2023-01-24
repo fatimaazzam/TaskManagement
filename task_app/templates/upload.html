@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Upload CSV File</h3>
+
+    {% if form_errors %}
+    <article class="message is-warning">
+          <div class="message-header">
+            <p>Warning</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Found errors on line {{ row_count }}:<p>
+            <ul>
+                {% for field, errors in form_errors.items %}
+                    {% for error in errors %}
+                        <li> {{field}}: {{ error }} </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+          </div>
+    </article>
+{% endif%}
+
+{% if row_count > 0  %}
+
+
+    <article class="message is-success">
+        <div class="message-header">
+            <p>Success</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            <p  >Successfully uploaded {{ row_count }} row(s)!</p>
+        </div>
+    </article>
+{% endif%}
+
+
+        <form
+            action="/upload/"
+            enctype="multipart/form-data"
+            method="post"
+        >
+            {% csrf_token %}
+            {{ form }}
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+
+{% endblock %}
