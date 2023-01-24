@@ -16,12 +16,12 @@
                 onclick="location.href='{% url "index" %}';">
 
             {% if object %}
-        <input
-            value="Delete"
-            type="button"
-            onclick="location.href=
-            '{% url "task-delete" object.id %}'">
-    {% endif %}
+            <input
+                value="Delete"
+                type="button"
+                onclick="location.href=
+                '{% url "task-delete" object.id %}'">
+            {% endif %}
         </form>
     </div>
 </div>

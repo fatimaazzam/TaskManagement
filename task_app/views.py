@@ -62,10 +62,10 @@ class ItemDelete(DeleteView):
 
 class UploadView(View):
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         return render(request, "upload.html", {"form": UploadForm()})
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
         tasks_file = request.FILES["tasks_file"]
         rows = TextIOWrapper(tasks_file, encoding="utf-8", newline="")
         row_count = 0
