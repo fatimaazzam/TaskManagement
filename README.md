@@ -233,6 +233,21 @@ as follows:
 #### update the task data
 
 ![](figures/update_task.png)
+
+
+- Delete Task
+
+ ```python
+""" 
+ path("task/<int:pk>/delete/", views.ItemDelete.as_view(), name="task-delete"),
+"""
+```
+#### The user can click on any task and then click on the delete button as follows:
+![](figures/delete.png)
+
+#### Then a confirmation massage form will appear for the user to confirm that the task will be deleted
+![](figures/confirm_delete.png)
+
 ### UML Diagrams
 
 
