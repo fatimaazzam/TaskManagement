@@ -151,7 +151,7 @@ start date, due data and description)
 
 ![](figures/db.png)
 
-## APIs 
+## APIs - Implementation
 
 ```python
 """
@@ -267,22 +267,13 @@ If there is a mistake then the system return error message for the user
 
 ![](figures/error.png)
 
-### UML Diagrams
-
-
-- **Class Diagram:**
-
-![](figures/class_diagram.png)
 
 
 
-- **State Diagram:**
-
-![](figures/state_diagram.png)
 
 --------------------------------------------------------------------------------
 
-## Implementation
+
 
 
 
