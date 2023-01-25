@@ -139,6 +139,13 @@ It can accept data from the view and render it using jinja syntax.
 Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to 
 build responsive web interfaces [3].
 
+## Database (SQLite file):
+After the analysis for the system requirement, I found that the application is very 
+simple we can use SQLite file which is A database that is created on one machine can be copied and used on a different 
+machine with a different architecture [4]. On the other hand if the requirement are more complicated 
+in this case we can use Postgres or another type of databases based on the use case 
+,volume of data that should be stored and also the number of users who will use the system 
+
 ## APIs 
 
 ### UML Diagrams
@@ -185,6 +192,7 @@ The following example from the run of the main class:
 - [1] https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
 - [2] https://www.educative.io/answers/what-is-mvt-structure-in-django
 - [3] https://bulma.io
+- [4] https://www.sqlite.org/onefile.html
 
 
 
