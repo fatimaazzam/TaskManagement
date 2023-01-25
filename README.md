@@ -183,6 +183,44 @@ The following url is used
 
 
 ![](figures/post_response.png)
+
+- View Tasks
+It will be the default url
+
+ ```python
+""" 
+
+ path("", views.ItemListView.as_view(), name="index"),
+
+"""
+```
+![](figures/all_tasks.png)
+
+As noticed tha tasks are sorted based on the due date by using order by in Meta class
+as follows:
+ ```python
+""" 
+
+ class TaskItem(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    start_date = models.DateTimeField(default=timezone.now)
+    due_date = models.DateTimeField(default=one_week_hence)
+
+    def get_absolute_url(self):
+        return reverse(
+            "index", args=[]
+        )
+
+    def __str__(self):
+        return f"{self.title}: due {self.due_date}"
+
+    class Meta:
+        ordering = ["due_date"]
+
+"""
+```
 ### UML Diagrams
 
 
