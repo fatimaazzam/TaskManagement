@@ -148,6 +148,7 @@ in this case we can use Postgres or another type of databases based on the use c
 Based on the analysis there will be table for the task which contains (task title, 
 start date, due data and description)
 
+
 ![](figures/db.png)
 
 ## APIs 
