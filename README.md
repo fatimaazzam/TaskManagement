@@ -171,7 +171,7 @@ urlpatterns = [
     path('upload/', views.UploadView.as_view()),
 ]
 ```
-- Create Task: 
+### Create Task: 
 The following url is used 
  ```python
 """ 
@@ -226,7 +226,7 @@ as follows:
 """
 ```
 
-- Update Task
+### Update Task
 
  ```python
 """ 
@@ -239,7 +239,7 @@ as follows:
 ![](figures/update_task.png)
 
 
-- Delete Task
+### Delete Task
 
  ```python
 """ 
@@ -254,7 +254,7 @@ as follows:
 
 ![](figures/delete_response.png)
 
-- Upload CSV File
+### Upload CSV File
 
  ```python
 """ 
