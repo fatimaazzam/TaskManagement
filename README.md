@@ -299,8 +299,8 @@ class ModelsTestCase(TestCase):
  python manage.py test 
 ```
 ## Example
-The following example from the run of the main class:
-![](figures/example.png)
+The following example from the run:
+![](figures/test.png)
 
 
 ## References
