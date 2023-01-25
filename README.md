@@ -95,7 +95,7 @@ will remove the task from the storage.
 - The system must be higher reliability.
 
 --------------------------------------------------------------------------------
-## Selected Technologies
+# Selected Technologies
 ## Django:
 Django is a high-level Python web framework that enables rapid development 
 of secure and maintainable websites. Built by experienced developers, 
@@ -104,7 +104,7 @@ so you can focus on writing your app without needing to reinvent the wheel.
 It is free and open source, has a thriving and active community, great documentation, 
 and many options for free and paid-for support [1]. 
 
-## MVT design pattern in Django
+### MVT design pattern in Django
 Django is built based on Model-View-Template (MVT) architecture. 
 MVT is a software design pattern for developing a 
 web application. It consists of the following three entities [2]:
@@ -112,16 +112,16 @@ web application. It consists of the following three entities [2]:
 2. View
 3. Template
 
-### Model
+- Model
 A Model is an object that defines the structure of the data in the Django application.
 It is responsible for maintaining the entire application’s data for which it provides various mechanisms to add, update, read and delete the data in the database.
-
-## View
+ 
+- View
 A View is a handler function that accepts HTTP requests, processes them, and returns the HTTP response.
 It retrieves the necessary data to fulfill the request using Models and renders them on the user interface using Templates.
 It can also create an HTML page using an HTML template dynamically, and populate it with data fetched from the model.
 
-## Template
+- Template
 A Template is a text file that defines the structure or layout of the user interface. The text file can be any type of file; for example HTML, XML, etc.
 It can accept data from the view and render it using jinja syntax.
 
@@ -134,6 +134,11 @@ It can accept data from the view and render it using jinja syntax.
    the database via Model.
 4. The View will render an appropriate template along with the retrieved data
    to the user.
+
+## Bulma: 
+Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to 
+build responsive web interfaces [3].
+
 ## APIs 
 
 ### UML Diagrams
@@ -179,6 +184,7 @@ The following example from the run of the main class:
 ## References
 - [1] https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
 - [2] https://www.educative.io/answers/what-is-mvt-structure-in-django
+- [3] https://bulma.io
 
 
 
