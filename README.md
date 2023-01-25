@@ -191,10 +191,10 @@ It will be the default url
 """ 
 
  path("", views.ItemListView.as_view(), name="index"),
-
+  path("tasks/<int:page>", views.listing, name="task-by-page"),
 """
 ```
-![](figures/all_tasks.png)
+![](figures/all_tasks_pagination.png)
 
 As noticed tha tasks are sorted based on the due date by using order by in Meta class
 as follows:
@@ -221,6 +221,18 @@ as follows:
 
 """
 ```
+
+- Update Task
+
+ ```python
+""" 
+ path("task/<int:pk>/", views.ItemUpdate.as_view(), name="item-update", ),
+"""
+```
+#### The user can click on the task and the following form will be opened to enable the user 
+#### update the task data
+
+![](figures/update_task.png)
 ### UML Diagrams
 
 
