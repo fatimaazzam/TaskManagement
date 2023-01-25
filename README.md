@@ -300,7 +300,7 @@ class ModelsTestCase(TestCase):
 ```
 ## Example
 The following example from the run:
-![](figures/test.png)
+![](figures/test.png){:height="50px" width="50px"}
 
 
 ## References
