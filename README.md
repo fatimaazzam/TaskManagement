@@ -178,6 +178,8 @@ The following url is used
 ```
  ![](figures/add_task.png)
 
+
+
 Then the following form will be open
  ![](figures/task_form.png)
 
