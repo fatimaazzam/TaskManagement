@@ -112,16 +112,16 @@ web application. It consists of the following three entities [2]:
 2. View
 3. Template
 
-- ## Model
+- ### Model
 A Model is an object that defines the structure of the data in the Django application.
 It is responsible for maintaining the entire application’s data for which it provides various mechanisms to add, update, read and delete the data in the database.
  
-- ## View
+- ### View
 A View is a handler function that accepts HTTP requests, processes them, and returns the HTTP response.
 It retrieves the necessary data to fulfill the request using Models and renders them on the user interface using Templates.
 It can also create an HTML page using an HTML template dynamically, and populate it with data fetched from the model.
 
-- ## Template
+- ### Template
 A Template is a text file that defines the structure or layout of the user interface. The text file can be any type of file; for example HTML, XML, etc.
 It can accept data from the view and render it using jinja syntax.
 
