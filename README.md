@@ -269,15 +269,6 @@ If there is a mistake then the system return error message for the user
 
 
 
-
-
---------------------------------------------------------------------------------
-
-
-
-
-
-
 --------------------------------------------------------------------------------
 
 ## Testing
@@ -291,7 +282,7 @@ To run the test. You can use the following commands:
 test method - 
 
 """
-python -m unittest
+ python manage.py test 
 ```
 ## Example
 The following example from the run of the main class:
