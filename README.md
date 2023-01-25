@@ -248,6 +248,25 @@ as follows:
 #### Then a confirmation massage form will appear for the user to confirm that the task will be deleted
 ![](figures/confirm_delete.png)
 
+![](figures/delete_response.png)
+
+- Upload CSV File
+
+ ```python
+""" 
+ path('upload/', views.UploadView.as_view()),
+"""
+```
+![](figures/upload_csv.png)
+
+The use can click on choose file and upload the CSV file.
+
+![](figures/sucess_upload.png)
+
+If there is a mistake then the system return error message for the user
+
+![](figures/error.png)
+
 ### UML Diagrams
 
 
