@@ -10,8 +10,6 @@ h
 :
 
 db.sqlite3,9/0/907ac5e500f6286c18519bf943721af4c97e50d5
-@
-task_app/urls.py,d/1/d1c4c5376735a23d4484ab8b86c6ed7b3c8e6906
 B
 task_app/models.py,1/4/14dcd56f6db37ea5fcacbf3f45e384d6d3879ad8
 G

@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 urlpatterns = [
     path("", views.ItemListView.as_view(), name="index"),
@@ -9,3 +9,4 @@ urlpatterns = [
     path("task.json", views.listing_api, name="task-api"),
     path('upload/', views.UploadView.as_view()),
 ]
+
