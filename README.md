@@ -125,7 +125,15 @@ It can also create an HTML page using an HTML template dynamically, and populate
 A Template is a text file that defines the structure or layout of the user interface. The text file can be any type of file; for example HTML, XML, etc.
 It can accept data from the view and render it using jinja syntax.
 
-
+####Control flow in MVT architecture: 
+![](figures/MVT.png)
+1. The user interacts with a Django application using a URL that is passed
+   to the MVT architecture. A URL mapper is used to redirect the requests to the appropriate view based on the request URL.
+2. If an appropriate view is found, it will be invoked.
+3. The View will interact with the Model and retrieve the necessary data from 
+   the database via Model.
+4. The View will render an appropriate template along with the retrieved data
+   to the user.
 ## APIs 
 
 ### UML Diagrams
