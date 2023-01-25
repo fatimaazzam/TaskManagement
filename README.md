@@ -178,11 +178,11 @@ The following url is used
 ```
  ![](figures/add_task.png)
 
-
-
 #### Then the following form will be opened
  ![](figures/task_form.png)
 
+
+![](figures/post_response.png)
 ### UML Diagrams
 
 
