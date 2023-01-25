@@ -135,6 +135,10 @@ It can accept data from the view and render it using jinja syntax.
 4. The View will render an appropriate template along with the retrieved data
    to the user.
 
+### ORM (Object Relational Mapper)
+The Django web framework includes a default object-relational mapping layer (ORM) that can be used to interact with data from various relational databases such as SQLite, PostgreSQL, and MySQL. Django allows us to add, delete, modify and query objects, using an API called ORM. ORM 
+stands for Object Relational Mapping [5].
+
 ## Bulma: 
 Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to 
 build responsive web interfaces [3].
@@ -300,7 +304,8 @@ class ModelsTestCase(TestCase):
 ```
 ## Example
 The following example from the run:
-![](figures/test.png){width=50}
+![](figures/test.png)
+
 
 
 ## References
@@ -308,6 +313,7 @@ The following example from the run:
 - [2] https://www.educative.io/answers/what-is-mvt-structure-in-django
 - [3] https://bulma.io
 - [4] https://www.sqlite.org/onefile.html
+- [5] https://www.scaler.com/topics/django/django-orm/
 
 
 
