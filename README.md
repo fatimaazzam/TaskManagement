@@ -145,6 +145,10 @@ simple we can use SQLite file which is A database that is created on one machine
 machine with a different architecture [4]. On the other hand if the requirement are more complicated 
 in this case we can use Postgres or another type of databases based on the use case 
 ,volume of data that should be stored and also the number of users who will use the system 
+Based on the analysis there will be table for the task which contains (task title, 
+start date, due data and description)
+
+![](figures/db.png)
 
 ## APIs 
 
