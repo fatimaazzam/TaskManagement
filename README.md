@@ -8,25 +8,44 @@ Outcomes from this module included:
 - Created basic UML diagrams
 - Applied SOLID principles using MVT (Mode, View and Template) architectural pattern
 --------------------------------------------------------------------------------
+# Vision and Scope for Task Manger Application
 
-## Requirements
+## Business Requirements 
+### Background
+To organize your tasks, estimate and schedule them, keep track
+of dependencies, resources, and milestones, and help you decide 
+whether to adjust their priority, task management software is employed.
+This application provide many advantages as follows:
 
-### Business Requirements 
+- Tasks prioritization.
+- Task scheduling.
+- Task traceability.
 
-Vending machines can be very profitable. If you can get 
-products to stock machines at good prices, and your vending 
-machine is in a place that a lot of people go to, you can make 
-a decent amount of money with little investment and time.
+### Business Objectives
+
+- Minimize time which is spent to remember what and when to do your tasks.
+- Minimize cost (no need to use papers, missing tasks which leads to lose your customers or business )
+- Minimize paper manual work.
+
+### Vision Statement
+
+For users who are working in different business fields, tha task manager 
+software is a smart and effective web application that will help 
+to automate all the tasks scheduling and prioritization. Unlike the current 
+situation, in which the users use papers to record and schedule their 
+tasks. With task manager software the users can easily record and track 
+their work and responsibilities so as a result they can minimize 
+using papers and missing tasks.
+
+### Scope and Limitations
+#### Main Feature:
+
+- Creating new tasks
+- Updating already existing tasks
+- Deleting tasks
+- Importing tasks from external files.
 
 ### User Requirements
-
-- The user shall be able to create new task item.
-- The user shall be able to view all the tasks.
-- The user shall be able to update a particular task.
-- The user shall be able to delete item.
-- The user shall be able to upload CSV file and the data shall be stored.
-
-### Specification
 
 - Creating a task:
 A user should be able to create a new task by making a POST request to the API 
@@ -45,6 +64,22 @@ The API should return a response indicating whether the delete was successful.
 - Import endpoint: the user should be apple to upload a csv file where each row 
 contains three columns that represent the task title , 
 start date and end date respectively, and insert that to the system database.
+
+### Specification
+
+- The system shall enable the user to create new task item which 
+include task title, start date and due date.
+- The system shall enable the user to view all the tasks that are 
+stored in the database.
+- The system shall enable the user to update a particular task including 
+updating title, start or due dates and the system will store and 
+record these changes.
+- The system shall enable the user to delete a specific task and system 
+will remove the task from the storage.
+- The system shall enable the user to upload CSV file which 
+ contains the task title, start and due dates and the 
+ system will store these data into the storage.
+
 ### Diagram:
 - **Use Diagram:**
 
@@ -55,18 +90,43 @@ start date and end date respectively, and insert that to the system database.
 ![](figures/activity_diagram.png)
 
 
-#### Functional Requirements
-
 ### Non-Functional Requirements
 - The system must be  maintainable.
 - The system must be higher reliability.
 
 --------------------------------------------------------------------------------
+## Selected Technologies
+## Django:
+Django is a high-level Python web framework that enables rapid development 
+of secure and maintainable websites. Built by experienced developers, 
+Django takes care of much of the hassle of web development, 
+so you can focus on writing your app without needing to reinvent the wheel.
+It is free and open source, has a thriving and active community, great documentation, 
+and many options for free and paid-for support [1]. 
 
-## Design & principle
+## MVT design pattern in Django
+Django is built based on Model-View-Template (MVT) architecture. 
+MVT is a software design pattern for developing a 
+web application. It consists of the following three entities [2]:
+1. Model
+2. View
+3. Template
 
-- MVT (Model, View and Template):
+### Model
+A Model is an object that defines the structure of the data in the Django application.
+It is responsible for maintaining the entire application’s data for which it provides various mechanisms to add, update, read and delete the data in the database.
 
+## View
+A View is a handler function that accepts HTTP requests, processes them, and returns the HTTP response.
+It retrieves the necessary data to fulfill the request using Models and renders them on the user interface using Templates.
+It can also create an HTML page using an HTML template dynamically, and populate it with data fetched from the model.
+
+## Template
+A Template is a text file that defines the structure or layout of the user interface. The text file can be any type of file; for example HTML, XML, etc.
+It can accept data from the view and render it using jinja syntax.
+
+
+## APIs 
 
 ### UML Diagrams
 
@@ -108,7 +168,9 @@ The following example from the run of the main class:
 ![](figures/example.png)
 
 
-
+## References
+- [1] https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
+- [2] https://www.educative.io/answers/what-is-mvt-structure-in-django
 
 
 
