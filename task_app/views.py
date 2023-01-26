@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 # TaskManagement/task_app/views.py
-from django.urls import reverse
+
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from csv import DictReader
 from io import TextIOWrapper
 from django.views.generic.base import View
@@ -23,6 +25,10 @@ class ItemListView(ListView):
     model = TaskItem
     template_name = "task_app/index.html"
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ItemListView, self).dispatch(*args, **kwargs)
+
 
 class ItemCreate(CreateView):
     model = TaskItem
@@ -32,6 +38,10 @@ class ItemCreate(CreateView):
         "start_date",
         "due_date",
         ]
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ItemCreate, self).dispatch(*args, **kwargs)
 
     def get_context_data(self):
         context = super(ItemCreate, self).get_context_data()
@@ -48,6 +58,10 @@ class ItemUpdate(UpdateView):
         "due_date",
         ]
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ItemUpdate, self).dispatch(*args, **kwargs)
+
     def get_context_data(self):
         context = super(ItemUpdate, self).get_context_data()
         context["title"] = "Edit item"
@@ -59,8 +73,16 @@ class ItemDelete(DeleteView):
 
     success_url = reverse_lazy("index")
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ItemDelete, self).dispatch(*args, **kwargs)
+
 
 class UploadView(View):
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(UploadView, self).dispatch(*args, **kwargs)
 
     def get(self, request):
         return render(request, "upload.html", {"form": UploadForm()})
