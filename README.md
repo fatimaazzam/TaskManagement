@@ -84,14 +84,12 @@ will remove the task from the storage.
 
 ![](figures/use_case.png)
 
-- **Activity Diagram:**
 
-![](figures/activity_diagram.png)
 
 
 ### Non-Functional Requirements
 - The system must be  maintainable.
-- The system must be higher reliability.
+- The system must be Secure.
 
 --------------------------------------------------------------------------------
 # Selected Technologies
@@ -170,6 +168,7 @@ urlpatterns = [
     path('upload/', views.UploadView.as_view()),
 ]
 ```
+---------------------------------------------------------------
 ### Create Task: 
 The following url is used 
  ```python
@@ -190,8 +189,8 @@ https://user-images.githubusercontent.com/27667600/214920899-afac83f0-e5f1-4efa-
 
 
 ![](figures/post_response.png)
-
-- View Tasks
+---------------------------------------------------------------
+### View Tasks
 It will be the default url
 
  ```python
@@ -228,13 +227,14 @@ as follows:
 
     def __str__(self):
         return f"{self.title}: due {self.due_date}"
-
+        
+    # Sorting the records based on the due date
     class Meta:
         ordering = ["due_date"]
 
 """
 ```
-
+---------------------------------------------------------------
 ### Update Task
 
  ```python
@@ -254,7 +254,7 @@ https://user-images.githubusercontent.com/27667600/214923016-43d3991f-0d39-49b4-
 
 ![](figures/update_task.png)
 
-
+---------------------------------------------------------------
 ### Delete Task
 
  ```python
@@ -275,6 +275,8 @@ https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-
 ![](figures/confirm_delete.png)
 
 ![](figures/delete_response.png)
+
+---------------------------------------------------------------
 
 ### Upload CSV File
 
