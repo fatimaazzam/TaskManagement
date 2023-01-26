@@ -179,6 +179,10 @@ The following url is used
 
 """
 ```
+
+https://user-images.githubusercontent.com/27667600/214920899-afac83f0-e5f1-4efa-b6ab-68d5a267af0a.mp4
+
+
  ![](figures/add_task.png)
 
 #### Then the following form will be opened
@@ -198,6 +202,12 @@ It will be the default url
 """
 ```
 ![](figures/all_tasks_pagination.png)
+
+
+
+https://user-images.githubusercontent.com/27667600/214918378-b7740331-b568-480b-9ec7-837efcde253d.mp4
+
+
 
 As noticed tha tasks are sorted based on the due date by using order by in Meta class
 as follows:
@@ -232,6 +242,13 @@ as follows:
  path("task/<int:pk>/", views.ItemUpdate.as_view(), name="item-update", ),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214923016-43d3991f-0d39-49b4-9eb0-0238faff2f97.mp4
+
+
+
+
 #### The user can click on the task and the following form will be opened to enable the user 
 #### update the task data
 
@@ -245,6 +262,12 @@ as follows:
  path("task/<int:pk>/delete/", views.ItemDelete.as_view(), name="task-delete"),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-98e7-bf99373cc591.mp4
+
+
+
 #### The user can click on any task and then click on the delete button as follows:
 ![](figures/delete.png)
 
@@ -260,6 +283,13 @@ as follows:
  path('upload/', views.UploadView.as_view()),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214924278-f41c08a9-8c93-4987-9d9f-a2450f3293d7.mp4
+
+
+
+
 ![](figures/upload_csv.png)
 
 The use can click on choose file and upload the CSV file.
