@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 # TaskManagement/task_app/views.py
 
 from django.contrib.auth.decorators import login_required
