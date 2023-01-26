@@ -113,14 +113,29 @@ web application. It consists of the following three entities [2]:
 A Model is an object that defines the structure of the data in the Django application.
 It is responsible for maintaining the entire application’s data for which it provides various mechanisms to add, update, read and delete the data in the database.
  
+In task manager application we need just one model for the task items which include 
+task title, start date, due date and description.
+
+For the user we will not create new model since Django Framework already provides 
+this model by default.
+
 - ### View
 A View is a handler function that accepts HTTP requests, processes them, and returns the HTTP response.
 It retrieves the necessary data to fulfill the request using Models and renders them on the user interface using Templates.
 It can also create an HTML page using an HTML template dynamically, and populate it with data fetched from the model.
 
+In task manager application we will use class based view for the CRUD operation since it 
+provide reusability and readability for the code. So we need to create class based view for
+list task view, create task view, update list view , delete task view and upload task 
+view. Each CRUD operation will have specific class in order to  achieve SOLID principles 
+especially the single responsibility. Each time we need to modify the code we will 
+not modify other classes.
+
 - ### Template
 A Template is a text file that defines the structure or layout of the user interface. The text file can be any type of file; for example HTML, XML, etc.
 It can accept data from the view and render it using jinja syntax.
+
+Many templates will be created for each CRUD operation.
 
 #### Control flow in MVT architecture: 
 ![](figures/MVT.png)
