@@ -199,6 +199,8 @@ It will be the default url
 ```
 ![](figures/all_tasks_pagination.png)
 
+![](List Tasks.mp4)
+
 As noticed tha tasks are sorted based on the due date by using order by in Meta class
 as follows:
  ```python
