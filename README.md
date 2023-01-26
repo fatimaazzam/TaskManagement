@@ -185,10 +185,10 @@ The following url is used
 https://user-images.githubusercontent.com/27667600/214920899-afac83f0-e5f1-4efa-b6ab-68d5a267af0a.mp4
 
 
- ![](figures/add_task.png)
+ ![](figures/create%20task.png)
 
 #### Then the following form will be opened
- ![](figures/task_form.png)
+ ![](figures/add_task_form.png)
 
 
 ![](figures/post_response.png)
@@ -204,7 +204,7 @@ It will be the default url
   path("tasks/<int:page>", views.listing, name="task-by-page"),
 """
 ```
-![](figures/all_tasks_pagination.png)
+![](figures/list_tasks.png)
 
 
 
@@ -257,7 +257,7 @@ https://user-images.githubusercontent.com/27667600/214923016-43d3991f-0d39-49b4-
 #### The user can click on the task and the following form will be opened to enable the user 
 #### update the task data
 
-![](figures/update_task.png)
+![](figures/task_update.png)
 
 ---------------------------------------------------------------
 ### Delete Task
@@ -275,12 +275,12 @@ https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-
 
 
 #### The user can click on any task and then click on the delete button as follows:
-![](figures/delete.png)
+![](figures/task_to_delete.png)
 
 #### Then a confirmation massage form will appear for the user to confirm that the task will be deleted
-![](figures/confirm_delete.png)
+![](figures/confirm_delete_form.png)
 
-![](figures/delete_response.png)
+![](figures/delete_35_response.png)
 
 ---------------------------------------------------------------
 
@@ -299,15 +299,15 @@ https://user-images.githubusercontent.com/27667600/214924278-f41c08a9-8c93-4987-
 
 
 
-![](figures/upload_csv.png)
+![](figures/tasks_upload.png)
 
 The use can click on choose file and upload the CSV file.
 
-![](figures/sucess_upload.png)
+![](figures/upload_successfully.png)
 
 If there is a mistake then the system return error message for the user
 
-![](figures/error.png)
+![](figures/upload_error.png)
 
 
 
