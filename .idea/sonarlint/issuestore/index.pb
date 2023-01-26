@@ -31,8 +31,6 @@ T
 $users/templates/users/dashboard.html,4/1/41900a37b58eede34b45f7f658dc1c996933c137
 M
 task_app/tests/test_models.py,c/7/c74fddbce06e3625fc4287e4e7349463231b9e0d
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 S
 #users/templates/users/register.html,7/b/7b48416384df1833e5f6d747439a8eaac912e68d
 L

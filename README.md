@@ -151,9 +151,11 @@ start date, due data and description)
 
 
 ![](figures/db.png)
+---------------------------------------------------------------
 
 ## APIs - Implementation
 
+---------------------------------------------------------------
 ```python
 """
 from django.urls import path
@@ -170,6 +172,7 @@ urlpatterns = [
 ```
 ---------------------------------------------------------------
 ### Create Task: 
+---------------------------------------------------------------
 The following url is used 
  ```python
 """ 
@@ -191,6 +194,7 @@ https://user-images.githubusercontent.com/27667600/214920899-afac83f0-e5f1-4efa-
 ![](figures/post_response.png)
 ---------------------------------------------------------------
 ### View Tasks
+---------------------------------------------------------------
 It will be the default url
 
  ```python
@@ -237,6 +241,7 @@ as follows:
 ---------------------------------------------------------------
 ### Update Task
 
+---------------------------------------------------------------
  ```python
 """ 
  path("task/<int:pk>/", views.ItemUpdate.as_view(), name="item-update", ),
@@ -257,6 +262,7 @@ https://user-images.githubusercontent.com/27667600/214923016-43d3991f-0d39-49b4-
 ---------------------------------------------------------------
 ### Delete Task
 
+---------------------------------------------------------------
  ```python
 """ 
  path("task/<int:pk>/delete/", views.ItemDelete.as_view(), name="task-delete"),
@@ -280,6 +286,7 @@ https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-
 
 ### Upload CSV File
 
+---------------------------------------------------------------
  ```python
 """ 
  path('upload/', views.UploadView.as_view()),
@@ -308,6 +315,7 @@ If there is a mistake then the system return error message for the user
 
 ## Testing
 
+---------------------------------------------------------------
 
 Sample of unit tests that are built:
 
