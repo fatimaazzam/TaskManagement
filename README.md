@@ -199,7 +199,11 @@ It will be the default url
 ```
 ![](figures/all_tasks_pagination.png)
 
-![](List Tasks.mp4)
+
+
+https://user-images.githubusercontent.com/27667600/214918378-b7740331-b568-480b-9ec7-837efcde253d.mp4
+
+
 
 As noticed tha tasks are sorted based on the due date by using order by in Meta class
 as follows:
