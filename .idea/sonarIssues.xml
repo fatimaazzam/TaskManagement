@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/task_app/templates/base1.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/task_app/templates/task_app/index.html">
           <value>
             <set />
@@ -79,6 +84,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/task_management/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/templates/base.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/templates/base.html">
           <value>
             <set />
           </value>

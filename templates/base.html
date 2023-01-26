@@ -1,0 +1,72 @@
+<!-- TaskManagement/task_app/templates/base1.html -->
+<!-- Base template -->
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Simple.css-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+        <title>Employee Task Lists</title>
+    </head>
+
+    <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+
+      <h1 class="title">TASK MANAGER SOFTWARE</h1>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-link" href="{% url 'logout' %}">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="{% url 'login' %}">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <section>
+
+        <div>
+            <p>
+            Your tiny task manager built with Django
+            </p>
+
+        </div>
+    </section>
+
+
+        <div class="container">
+
+            <div >
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+
+    </body>
+
+</html>
