@@ -255,6 +255,12 @@ as follows:
  path("task/<int:pk>/delete/", views.ItemDelete.as_view(), name="task-delete"),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-98e7-bf99373cc591.mp4
+
+
+
 #### The user can click on any task and then click on the delete button as follows:
 ![](figures/delete.png)
 
