@@ -283,6 +283,13 @@ https://user-images.githubusercontent.com/27667600/214921968-633a54af-47b0-45b0-
  path('upload/', views.UploadView.as_view()),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214924278-f41c08a9-8c93-4987-9d9f-a2450f3293d7.mp4
+
+
+
+
 ![](figures/upload_csv.png)
 
 The use can click on choose file and upload the CSV file.
