@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/task_app/admin.py">
           <value>
             <set />
@@ -63,6 +68,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/task_app/tests/test_models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/task_app/tests/test_views.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/task_app/urls.py">
           <value>
             <set />
@@ -79,6 +94,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/task_management/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/urls.py">
           <value>
             <set />
           </value>

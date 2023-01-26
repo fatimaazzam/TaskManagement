@@ -1,6 +1,5 @@
 # REST API implementation using Django Framework
 
-
 Outcomes from this module included:
 
 - Developed an understanding of the requirements' analysis process
