@@ -9,7 +9,7 @@
     <input
             value="Add a new task"
             type="button"
-            onclick="location.href='{% url "task-add" %}'"/>
+            onclick="location.href='{% url "task-add" %}'" style="background-color:#8C92AC;"/>
 </p>
 
 <ul>
@@ -36,14 +36,14 @@
 <ul>
     {% for task in object_list %}
     <li >
-        <div>
+        <div class="container">
             <div
                     role="button"
-                    onclick="location.href=
-                        '{% url "item-update" task.id %}'">
+                    onclick="location.href= '{% url "item-update" task.id %}'" >
                     {{ task.title }} -
                     (Due {{ task.due_date | date:"l, F j" }})
             </div>
+
         </div>
     </li>
 
