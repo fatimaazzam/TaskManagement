@@ -242,6 +242,13 @@ as follows:
  path("task/<int:pk>/", views.ItemUpdate.as_view(), name="item-update", ),
 """
 ```
+
+
+https://user-images.githubusercontent.com/27667600/214923016-43d3991f-0d39-49b4-9eb0-0238faff2f97.mp4
+
+
+
+
 #### The user can click on the task and the following form will be opened to enable the user 
 #### update the task data
 
