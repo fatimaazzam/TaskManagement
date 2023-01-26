@@ -109,6 +109,7 @@ class UploadView(View):
         )
 
 
+@login_required
 def listing(request, page):
     tasks = TaskItem.objects.all().order_by("due_date")
     paginator = Paginator(tasks, per_page=4)
