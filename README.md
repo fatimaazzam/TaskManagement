@@ -151,6 +151,7 @@ Many templates will be created for each CRUD operation.
 The Django web framework includes a default object-relational mapping layer (ORM) that can be used to interact with data from various relational databases such as SQLite, PostgreSQL, and MySQL. Django allows us to add, delete, modify and query objects, using an API called ORM. ORM 
 stands for Object Relational Mapping [5].
 
+
 ### Required Application should be created in Django
 1. Task_app:
 This app is responsible about task management. Any CRUD
