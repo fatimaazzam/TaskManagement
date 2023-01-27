@@ -88,17 +88,16 @@ class UploadView(View):
 
     def post(self, request):
         tasks_file = request.FILES["tasks_file"]
-        print("tasks_file",tasks_file)
         form_errors = []
         row_count = 0
         if not str(tasks_file).endswith('.csv'):
             form_errors.append("CSV file is only supported")
         else:
-            rows = TextIOWrapper(tasks_file, encoding="utf-8", newline="")
+            lines = TextIOWrapper(tasks_file, encoding="utf-8", newline="")
 
-            for row in DictReader(rows):
+            for line in DictReader(lines):
                 row_count += 1
-                form = TaskForm(row)
+                form = TaskForm(line)
                 if not form.is_valid():
                     form_errors = form.errors
                     break
