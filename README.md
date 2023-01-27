@@ -151,6 +151,16 @@ Many templates will be created for each CRUD operation.
 The Django web framework includes a default object-relational mapping layer (ORM) that can be used to interact with data from various relational databases such as SQLite, PostgreSQL, and MySQL. Django allows us to add, delete, modify and query objects, using an API called ORM. ORM 
 stands for Object Relational Mapping [5].
 
+### Required Application should be created in Django
+1. Task_app:
+This app is responsible about task management. Any CRUD
+operation for the task will be implemented and manged 
+inside task app.
+2. User app:
+This app is responsible about user management. So any operation
+including user authentication and authorization will be 
+implemented inside this app.
+
 ## Bulma: 
 Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to 
 build responsive web interfaces [3].
