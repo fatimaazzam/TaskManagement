@@ -100,6 +100,7 @@ class UploadView(View):
             for line in DictReader(lines):
                 row_count += 1
                 form = TaskForm(line)
+                # Validate data
                 if not form.is_valid():
                     form_errors = form.errors
                     break
