@@ -8,7 +8,7 @@ def one_week_hence():
 
 
 class TaskItem(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100,  unique=True)
     description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     start_date = models.DateTimeField(default=timezone.now)
