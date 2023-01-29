@@ -22,5 +22,23 @@ class TaskItem(models.Model):
     def __str__(self):
         return f"{self.title}: due {self.due_date}"
 
+    def save(self, *args, **kwargs):
+        # get number of tasks that have an overlapping start date
+        items_overlapping_start = TaskItem.objects.filter(start_date__gte=self.start_date,
+                                                                          start_date__lte=self.due_date).count()
+
+        # get number of tasks that have an overlapping end date
+        items_overlapping_end = TaskItem.objects.filter(due_date__gte=self.start_date,
+                                                                        due_date__lte=self.due_date).count()
+
+        overlapping_items_present = items_overlapping_start > 0 or items_overlapping_end > 0
+
+        if overlapping_items_present:
+            return
+        else:
+            super(TaskItem, self).save(*args, **kwargs)  # Call the "real" save() method.
+
+
+
     class Meta:
         ordering = ["due_date"]

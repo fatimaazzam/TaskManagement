@@ -96,10 +96,11 @@ class UploadView(View):
             form_errors.append("CSV file is only supported")
         else:
             lines = TextIOWrapper(tasks_file, encoding="utf-8", newline="")
+
             for line in DictReader(lines):
                 row_count += 1
                 form = TaskForm(line)
-                # Validate data
+                #Vali
                 if not form.is_valid():
                     form_errors = form.errors
                     break
