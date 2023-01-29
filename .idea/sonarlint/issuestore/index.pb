@@ -11,8 +11,6 @@ A
 tasks_file3.csv,3/5/355dce4efe1e69caa1088b28b19f48b493895000
 N
 task_app/templates/upload.html,4/8/4854602bc92322b88433de5dd9544e705cdb03c8
-@
-task_app/urls.py,d/1/d1c4c5376735a23d4484ab8b86c6ed7b3c8e6906
 =
 users/apps.py,5/4/547f374cbbeef99e636bc50f0d5b5ba07651acb5
 f
@@ -35,3 +33,14 @@ S
 #users/templates/users/register.html,7/b/7b48416384df1833e5f6d747439a8eaac912e68d
 L
 task_app/tests/test_views.py,7/b/7b0d0b76ed9510bbef5d060c83ff23a101852e3e
+I
+users/templates/base.html,e/d/ed345a7ffbcb48c24aa6c0846b0d795d89fe7d3c
+>
+users/views.py,5/f/5fc54a09665485d90807a8e72925d27743a0db75
+^
+.task_app/templates/task_app/taskitem_form.html,c/1/c1002929b88b21b4a51f3007f0b2c6bd1c0a5607
+A
+task_app/forms.py,c/8/c81f04ceb2290db9a9ecc34011d0e1e89ea8c63d
+:
+
+db.sqlite3,9/0/907ac5e500f6286c18519bf943721af4c97e50d5

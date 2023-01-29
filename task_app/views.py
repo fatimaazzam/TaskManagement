@@ -19,6 +19,8 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from .models import TaskItem
 
+TASK_PER_PAGE = 4
+
 
 class ItemListView(ListView):
     model = TaskItem
@@ -112,33 +114,14 @@ class UploadView(View):
         )
 
 
+# list tasks by page
 @login_required
-def listing(request, page):
+def list_tasks(request, page):
     tasks = TaskItem.objects.all().order_by("due_date")
-    paginator = Paginator(tasks, per_page=4)
+    paginator = Paginator(tasks, per_page=TASK_PER_PAGE)
     page_object = paginator.get_page(page)
     page_object.adjusted_elided_pages = paginator.get_elided_page_range(page)
     context = {"page_obj": page_object}
     return render(request, "task_app/index.html", context)
 
 
-def listing_api(request):
-    page_number = request.GET.get("page", 1)
-    per_page = request.GET.get("per_page", 2)
-    startswith = request.GET.get("startswith", "")
-    tasks = TaskItem.objects.filter(
-        title__startswith=startswith
-    )
-    paginator = Paginator(tasks, per_page)
-    page_obj = paginator.get_page(page_number)
-    data = [{"title": task.title} for task in page_obj.object_list]
-
-    payload = {
-        "page": {
-            "current": page_obj.number,
-            "has_next": page_obj.has_next(),
-            "has_previous": page_obj.has_previous(),
-        },
-        "data": data
-    }
-    return JsonResponse(payload)

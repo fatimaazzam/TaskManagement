@@ -192,7 +192,6 @@ urlpatterns = [
     path("task/<int:pk>/", views.ItemUpdate.as_view(), name="item-update", ),
     path("task/<int:pk>/delete/", views.ItemDelete.as_view(), name="task-delete"),
     path("tasks/<int:page>", views.listing, name="task-by-page"),
-    path("task.json", views.listing_api, name="task-api"),
     path('upload/', views.UploadView.as_view()),
 ]
 ```
