@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 # TaskManagement/task_app/views.py
 
 from django.contrib.auth.decorators import login_required
@@ -8,7 +8,6 @@ from io import TextIOWrapper
 from django.views.generic.base import View
 from .forms import UploadForm, TaskForm
 from django.core.paginator import Paginator
-from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.generic import (
                                     ListView,

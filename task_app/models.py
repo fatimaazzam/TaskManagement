@@ -38,7 +38,5 @@ class TaskItem(models.Model):
         else:
             super(TaskItem, self).save(*args, **kwargs)  # Call the "real" save() method.
 
-
-
     class Meta:
         ordering = ["due_date"]
