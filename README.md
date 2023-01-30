@@ -3,8 +3,8 @@
 Outcomes from this module included:
 
 - Developed an understanding of the requirements' analysis process
-- Introduced to systems design concepts such as use cases/sequence diagrams/class diagrams
-- Created basic UML diagrams
+- Build rest api appication.
+- Introduced to systems design concepts such as use cases diagram
 - Applied SOLID principles using MVT (Mode, View and Template) architectural pattern
 --------------------------------------------------------------------------------
 # Vision and Scope for Task Manger Application
@@ -80,7 +80,7 @@ will remove the task from the storage.
  system will store these data into the storage.
 
 ### Diagram:
-- **Use Diagram:**
+- **Use Case Diagram:**
 
 ![](figures/use_case.png)
 
