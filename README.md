@@ -6,7 +6,7 @@ Outcomes from this module included:
 - Build rest api appication.
 - Introduced to systems design concepts such as use cases diagram
 - Applied SOLID principles using MVT (Mode, View and Template) architectural pattern
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 # Vision and Scope for Task Manger Application
 
 ## Business Requirements 
